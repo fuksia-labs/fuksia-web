@@ -1,0 +1,115 @@
+:root {
+  --ink: #1a1d29;
+  --ink-soft: #4a4f63;
+  --paper: #fdfcfa;
+  --line: #e4e1da;
+  --accent: #d2462e;
+  --mono: 'SF Mono', 'Roboto Mono', Consolas, monospace;
+  --serif: 'Source Serif Pro', 'Georgia', serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+
+header.top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.lang-switch a {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+  margin-left: 0.75rem;
+}
+.lang-switch a.active { color: var(--accent); }
+
+h1 {
+  font-family: var(--serif);
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.meta {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2.75rem 0 0.9rem;
+}
+
+p, li { color: var(--ink-soft); font-size: 0.98rem; }
+
+a { color: var(--accent); }
+
+ul { padding-left: 1.2rem; }
+li { margin-bottom: 0.4rem; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+}
+th, td {
+  text-align: left;
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+th {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+footer.bottom {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 600px) {
+  .wrap { padding: 2.5rem 1.25rem 4rem; }
+  h1 { font-size: 1.7rem; }
+}

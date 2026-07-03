@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentation — ClockIn for Jira | Fuksia Labs</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/">Fuksia Labs</a>
+  </header>
+
+  <h1>Documentation</h1>
+  <div class="meta">ClockIn for Jira · Last updated: July 3, 2026</div>
+
+  <p><strong>ClockIn for Jira</strong> is a working-time tracking app for Jira Cloud. This page covers installation, first steps, core features, configuration, and frequently asked questions.</p>
+
+  <h2>1. Installation</h2>
+  <p>ClockIn for Jira is distributed through the Atlassian Marketplace and installs directly into your Jira Cloud site.</p>
+  <ul>
+    <li>Go to the <a href="https://marketplace.atlassian.com" target="_blank">Atlassian Marketplace</a> and search for "ClockIn for Jira".</li>
+    <li>Click <strong>Get it now</strong> and choose the Jira Cloud site where you want to install the app.</li>
+    <li>Confirm the requested permissions and complete the installation.</li>
+    <li>Only Jira site administrators can install or uninstall apps. If you don't have admin access, ask your Jira administrator to install it on your behalf.</li>
+  </ul>
+  <p>Once installed, the app appears in the Jira navigation as <strong>ClockIn</strong> and is available to every user on the site.</p>
+
+  <h2>2. Getting started</h2>
+  <p>To log your first clock-in session:</p>
+  <ul>
+    <li>Open the <strong>ClockIn</strong> item from the Jira navigation.</li>
+    <li>Click <strong>Start</strong> to begin tracking your working time.</li>
+    <li>The app records the timestamp automatically — there is nothing else to configure to start using it.</li>
+    <li>When you finish your session, click <strong>Stop</strong>. Your recorded time is saved to your personal history.</li>
+  </ul>
+  <p>If your organization has configured a company work schedule, ClockIn compares your logged time against it and flags any mismatches.</p>
+
+  <h2>3. Core features</h2>
+
+  <h3>Start / Pause / Resume / Stop</h3>
+  <p>Clock events follow a simple state machine:</p>
+  <ul>
+    <li><strong>Start</strong> — begins a new working session.</li>
+    <li><strong>Pause</strong> — stops the clock temporarily, for example during a break.</li>
+    <li><strong>Resume</strong> — continues a paused session.</li>
+    <li><strong>Stop</strong> — ends the session and closes the record for that day.</li>
+  </ul>
+  <p>Every event is timestamped and kept as an immutable record, forming the basis of your time-tracking history.</p>
+
+  <h3>Team view</h3>
+  <p>Managers and admins can see the status and logged hours of their team members from a dedicated team view, useful for monitoring attendance and spotting incidents without leaving Jira.</p>
+
+  <h3>Incidents</h3>
+  <p>If a clock event is missing or incorrect, users can raise an incident to request a correction. Managers can review and resolve incidents, keeping a clear audit trail of any changes to the original record.</p>
+
+  <h3>Export</h3>
+  <p>Time records can be exported in CSV format for payroll, audits, or compliance purposes. Exports can be filtered by user, team, or date range, depending on your role.</p>
+
+  <h2>4. Configuration</h2>
+  <p>Administrators configure the app from the ClockIn settings panel:</p>
+  <ul>
+    <li><strong>Company work schedule</strong> — define expected working hours per day or week, used to flag deviations in employee records.</li>
+    <li><strong>Roles</strong> — assign each user a role of employee, manager, or admin, controlling what they can see and do within the app.</li>
+    <li><strong>Timezone</strong> — set the timezone used to timestamp and display clock events, ensuring consistency across distributed teams.</li>
+  </ul>
+
+  <h2>5. Frequently asked questions</h2>
+
+  <h3>Do I need a separate account to use ClockIn?</h3>
+  <p>No. ClockIn uses your existing Atlassian account — there is no separate sign-up or login.</p>
+
+  <h3>Can I edit a clock event after it's been recorded?</h3>
+  <p>Clock events are immutable. To fix a mistake, raise an incident instead, which creates a reviewable correction without altering the original record.</p>
+
+  <h3>Who can see my time records?</h3>
+  <p>You can always see your own records. Managers and admins in your organization can see records according to the role configuration set by your administrator.</p>
+
+  <h3>Is there a free plan?</h3>
+  <p>Yes, ClockIn offers a free plan limited to a small number of users, plus paid per-user plans for larger organizations, both managed through the Atlassian Marketplace.</p>
+
+  <h3>What happens to my data if the app is uninstalled?</h3>
+  <p>Data stored by the app is removed in accordance with Atlassian Forge's data retention policies following uninstallation. See our <a href="/en/privacy.html">Privacy Policy</a> for details.</p>
+
+  <h3>Where can I get support?</h3>
+  <p>For questions or issues not covered here, write to us at <a href="mailto:support@fuksia.com">support@fuksia.com</a>.</p>
+
+  <footer class="bottom">Fuksia Labs · ClockIn for Jira</footer>
+</div>
+</body>
+</html>

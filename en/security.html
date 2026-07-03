@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Policy — ClockIn for Jira | Fuksia Labs</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/">Fuksia Labs</a>
+    <span class="lang-switch">
+      <a href="/es/security.html">ES</a>
+      <a href="/en/security.html" class="active">EN</a>
+    </span>
+  </header>
+
+  <h1>Security Policy</h1>
+  <div class="meta">ClockIn for Jira · Last updated: July 3, 2026</div>
+
+  <p>This Security Policy describes the technical and organizational measures Fuksia Labs applies to protect data processed by the <strong>ClockIn for Jira</strong> app ("the App"). It complements our <a href="/en/privacy.html">Privacy Policy</a>, which covers what data we collect and why.</p>
+
+  <h2>1. Infrastructure and hosting</h2>
+  <p>The App is built entirely on Atlassian Forge and runs within Atlassian's managed cloud infrastructure. Fuksia Labs does not operate its own servers, databases, or third-party cloud services to store or process App data. All storage relies on Forge Storage, which inherits Atlassian's own security, availability, and compliance controls.</p>
+
+  <h2>2. Authentication and access control</h2>
+  <p>The App does not implement its own authentication system or store user credentials. All identity verification is delegated to Atlassian's native Forge invocation context. Access to functionality is enforced server-side according to the role assigned to each user (employee, manager, or administrator), so that users can only view or modify data they are authorized to access.</p>
+
+  <h2>3. Encryption</h2>
+  <p>Data in transit between the App's frontend, its backend resolvers, and Atlassian's APIs is encrypted using TLS. Data at rest in Forge Storage is encrypted by Atlassian as part of the underlying Forge platform. No data is transmitted to or stored on infrastructure outside Atlassian Cloud.</p>
+
+  <h2>4. Data minimization</h2>
+  <p>The App only requests the Atlassian API scopes strictly necessary for its functionality, and only processes the data described in our <a href="/en/privacy.html">Privacy Policy</a>: account identifiers, names, email addresses, clock events, and configuration data required for legal time-tracking compliance.</p>
+
+  <h2>5. Vulnerability management</h2>
+  <p>Every version of the App submitted to the Atlassian Marketplace goes through Atlassian's automated security scanning as part of the approval workflow. Any vulnerability findings raised through this process are reviewed and remediated by Fuksia Labs within the timelines required by Atlassian's Marketplace Security Enforcement Policy.</p>
+
+  <h2>6. Responsible disclosure</h2>
+  <p>If you believe you have found a security vulnerability in the App, please report it to <a href="mailto:info@fuksia.com">info@fuksia.com</a>. We investigate all reports and respond as quickly as possible. Fuksia Labs does not currently participate in the Atlassian Marketplace Bug Bounty program.</p>
+
+  <h2>7. Incident response</h2>
+  <p>In the event of a confirmed security incident affecting customer data, Fuksia Labs will notify the affected organization's administrator without undue delay, consistent with our obligations under the GDPR (Articles 33 and 34), and will cooperate with Atlassian's own incident response procedures where applicable.</p>
+
+  <h2>8. Subprocessors</h2>
+  <p>Atlassian is the only infrastructure provider involved in processing App data, through the Forge platform. Fuksia Labs does not use additional third-party subprocessors, analytics services, or trackers within the App.</p>
+
+  <h2>9. Secure development practices</h2>
+  <p>The App's source code is maintained under version control with restricted access. Changes are reviewed before being deployed to production. The App requests the minimum set of Forge permissions and API scopes required for its features, following the principle of least privilege.</p>
+
+  <h2>10. Contact</h2>
+  <p>For any questions about this Security Policy or to report a security concern, write to us at <a href="mailto:info@fuksia.com">info@fuksia.com</a>.</p>
+
+  <footer class="bottom">Fuksia Labs · ClockIn for Jira</footer>
+</div>
+</body>
+</html>

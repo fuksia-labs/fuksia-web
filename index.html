@@ -1,38 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fuksia Labs</title>
-<link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuksia — Diseño & Comunicación Visual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #faf8f5;
+      color: #1a1410;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Sections */
+    .section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+      text-align: center;
+    }
+
+    .section-fuksia {
+      height: 66.67vh;
+      background: #faf8f5;
+      border-bottom: 1px solid rgba(26,20,16,0.08);
+      animation: fadeUp 0.9s ease 0.1s both;
+    }
+
+    .section-labs {
+      height: 33.33vh;
+      background: #111009;
+      animation: fadeUp 0.9s ease 0.3s both;
+      gap: 32px;
+    }
+
+    /* Fuksia logo */
+    .logo-main {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(72px, 12vw, 140px);
+      letter-spacing: -4px;
+      line-height: 1;
+      color: #1a1410;
+    }
+    .logo-main .dot { color: #e8005a; }
+
+    .tagline {
+      margin-top: 20px;
+      font-size: 15px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #9b9590;
+    }
+    .tagline .amp { color: #e8005a; }
+
+    /* Labs logo */
+    .logo-labs-wrap {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .logo-labs-wrap:hover { text-decoration: none; }
+
+    .logo-labs-main {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(36px, 5.5vw, 64px);
+      letter-spacing: -2px;
+      line-height: 1;
+      color: #f0ede8;
+    }
+    .logo-labs-main .dot { color: #e8005a; }
+
+    .logo-labs-suffix {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(36px, 5.5vw, 64px);
+      letter-spacing: -2px;
+      color: rgba(240,237,232,0.55);
+      margin-left: 4px;
+    }
+
+    /* Product link */
+    .product-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 28px;
+      background: rgba(240,237,232,0.05);
+      border: 1px solid rgba(240,237,232,0.12);
+      border-radius: 12px;
+      color: #f0ede8;
+      font-size: 15px;
+      font-weight: 400;
+      transition: border-color 0.25s, background 0.25s;
+      text-decoration: none;
+    }
+    .product-link:hover {
+      border-color: rgba(232,0,90,0.4);
+      background: rgba(232,0,90,0.06);
+      text-decoration: none;
+    }
+
+    .product-link-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #1a3b60, #0a6b65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .product-link-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+    }
+    .product-link-name { font-weight: 600; font-size: 15px; color: #f0ede8; }
+    .product-link-sub  { font-size: 12px; color: #a09d9a; }
+    .product-link-arrow { color: #888480; font-size: 18px; margin-left: 4px; }
+
+    /* Footer */
+    footer {
+      padding: 24px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #111009;
+      border-top: 1px solid rgba(240,237,232,0.06);
+    }
+    footer span { font-size: 12px; color: #444240; }
+    footer a { font-size: 12px; color: #444240; }
+    footer a:hover { color: #8b8880; text-decoration: none; }
+    .footer-links { display: flex; gap: 20px; }
+  </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <a class="brand" href="/">Fuksia Labs</a>
-  </header>
 
-  <h1>Fuksia Labs</h1>
-  <div class="meta">Independent software studio</div>
+  <!-- FUKSIA -->
+  <section class="section section-fuksia">
+    <div class="logo-main">fuksia<span class="dot">.</span></div>
+    <p class="tagline">diseño <span class="amp">&amp;</span> comunicación visual</p>
+  </section>
 
-  <p>We build simple, focused tools for teams. Our first product is <strong>ClockIn for Jira</strong>, a working-time tracking app for Jira Cloud built around compliance, clarity, and minimal friction.</p>
+  <!-- FUKSIA LABS -->
+  <section class="section section-labs">
+    <a class="logo-labs-wrap" href="/labs.html">
+      <div class="logo-labs-main">fuksia<span class="dot">.</span></div>
+      <div class="logo-labs-suffix">labs</div>
+    </a>
 
-  <h2>Documentation</h2>
-  <ul>
-    <li><a href="/en/docs.html">ClockIn for Jira docs</a></li>
-  </ul>
+    <a class="product-link" href="/labs.html">
+      <div class="product-link-icon">
+        <svg width="20" height="20" viewBox="0 0 22 22" fill="none">
+          <circle cx="11" cy="11" r="10" stroke="rgba(255,255,255,0.85)" stroke-width="1.5"/>
+          <path d="M11 6v5.5l3.5 3.5" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="product-link-text">
+        <span class="product-link-name">ClockIn for Jira</span>
+        <span class="product-link-sub">Registro de jornada para equipos de Jira</span>
+      </div>
+      <span class="product-link-arrow">→</span>
+    </a>
+  </section>
 
-  <h2>Legal</h2>
-  <ul>
-    <li><a href="/en/privacy.html">Privacy Policy</a> · <a href="/es/privacy.html">Política de Privacidad</a></li>
-    <li><a href="/en/terms.html">Terms of Service</a> · <a href="/es/terms.html">Términos de Servicio</a></li>
-    <li><a href="/en/security.html">Security Policy</a> · <a href="/es/security.html">Política de Seguridad</a></li>
-  </ul>
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2004–2026 Fuksia</span>
+    <div class="footer-links">
+      <a href="/es/privacy.html">Privacidad</a>
+      <a href="/es/terms.html">Términos</a>
+      <a href="mailto:info@fuksia.com">Contacto</a>
+    </div>
+  </footer>
 
-  <h2>Contact</h2>
-  <p><a href="mailto:info@fuksia.com">info@fuksia.com</a></p>
-
-  <footer class="bottom">Fuksia Labs</footer>
-</div>
 </body>
 </html>

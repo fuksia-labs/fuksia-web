@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentación — ClockIn for Jira | Fuksia Labs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/labs.html"><span class="brand-main">fuksia<span class="dot">.</span></span><span class="brand-suffix">labs</span></a>
+    <span class="lang-switch">
+      <a href="/es/docs.html" class="active">ES</a>
+      <a href="/en/docs.html">EN</a>
+    </span>
+  </header>
+
+  <h1>Documentación</h1>
+  <div class="meta">ClockIn for Jira · Última actualización: 3 de julio de 2026</div>
+
+  <p><strong>ClockIn for Jira</strong> es una aplicación de registro de jornada laboral para Jira Cloud. Esta página cubre instalación, primeros pasos, funcionalidades principales, configuración y preguntas frecuentes.</p>
+
+  <h2>1. Instalación</h2>
+  <p>ClockIn for Jira se distribuye a través del Atlassian Marketplace y se instala directamente en tu sitio de Jira Cloud.</p>
+  <ul>
+    <li>Ve al <a href="https://marketplace.atlassian.com" target="_blank">Atlassian Marketplace</a> y busca "ClockIn for Jira".</li>
+    <li>Haz clic en <strong>Get it now</strong> y elige el sitio de Jira Cloud donde quieres instalarla.</li>
+    <li>Confirma los permisos solicitados y completa la instalación.</li>
+    <li>Solo los administradores del sitio de Jira pueden instalar o desinstalar apps. Si no tienes acceso de administrador, pide a tu administrador de Jira que la instale por ti.</li>
+  </ul>
+  <p>Una vez instalada, la app aparece en la navegación de Jira como <strong>ClockIn</strong> y está disponible para todos los usuarios del sitio.</p>
+
+  <h2>2. Primeros pasos</h2>
+  <p>Para registrar tu primera sesión de fichaje:</p>
+  <ul>
+    <li>Abre el elemento <strong>ClockIn</strong> desde la navegación de Jira.</li>
+    <li>Haz clic en <strong>Empezar</strong> para comenzar a registrar tu jornada.</li>
+    <li>La app registra la marca de tiempo automáticamente — no hay nada más que configurar para empezar a usarla.</li>
+    <li>Cuando termines tu sesión, haz clic en <strong>Detener</strong>. Tu tiempo registrado se guarda en tu historial personal.</li>
+  </ul>
+  <p>Si tu organización ha configurado un horario laboral de empresa, ClockIn compara tu tiempo registrado con ese horario y señala cualquier discrepancia.</p>
+
+  <h2>3. Funcionalidades principales</h2>
+
+  <h3>Iniciar / Pausar / Reanudar / Detener</h3>
+  <p>Los eventos de fichaje siguen una máquina de estados simple:</p>
+  <ul>
+    <li><strong>Iniciar</strong> — comienza una nueva sesión de trabajo.</li>
+    <li><strong>Pausar</strong> — detiene el reloj temporalmente, por ejemplo durante un descanso.</li>
+    <li><strong>Reanudar</strong> — continúa una sesión pausada.</li>
+    <li><strong>Detener</strong> — finaliza la sesión y cierra el registro de ese día.</li>
+  </ul>
+  <p>Cada evento queda con marca de tiempo y se guarda como un registro inmutable, formando la base de tu historial de fichaje.</p>
+
+  <h3>Vista de equipo</h3>
+  <p>Managers y administradores pueden ver el estado y las horas registradas de los miembros de su equipo desde una vista de equipo dedicada, útil para supervisar la asistencia y detectar incidencias sin salir de Jira.</p>
+
+  <h3>Incidencias</h3>
+  <p>Si un evento de fichaje falta o es incorrecto, los usuarios pueden crear una incidencia para solicitar una corrección. Los managers pueden revisar y resolver incidencias, manteniendo un registro de auditoría claro de cualquier cambio sobre el registro original.</p>
+
+  <h3>Exportación</h3>
+  <p>Los registros de tiempo se pueden exportar en formato CSV para nóminas, auditorías o fines de cumplimiento normativo. Las exportaciones se pueden filtrar por usuario, equipo o rango de fechas, según tu rol.</p>
+
+  <h2>4. Configuración</h2>
+  <p>Los administradores configuran la app desde el panel de ajustes de ClockIn:</p>
+  <ul>
+    <li><strong>Horario laboral de empresa</strong> — define las horas de trabajo esperadas por día o semana, usadas para señalar desviaciones en los registros de los empleados.</li>
+    <li><strong>Roles</strong> — asigna a cada usuario un rol de empleado, manager o admin, controlando qué puede ver y hacer dentro de la app.</li>
+    <li><strong>Zona horaria</strong> — establece la zona horaria usada para marcar y mostrar los eventos de fichaje, garantizando consistencia entre equipos distribuidos.</li>
+  </ul>
+
+  <h2>5. Preguntas frecuentes</h2>
+
+  <h3>¿Necesito una cuenta separada para usar ClockIn?</h3>
+  <p>No. ClockIn usa tu cuenta de Atlassian existente — no hay registro ni inicio de sesión separado.</p>
+
+  <h3>¿Puedo editar un evento de fichaje después de registrarlo?</h3>
+  <p>Los eventos de fichaje son inmutables. Para corregir un error, crea una incidencia en su lugar, lo que genera una corrección revisable sin alterar el registro original.</p>
+
+  <h3>¿Quién puede ver mis registros de tiempo?</h3>
+  <p>Siempre puedes ver tus propios registros. Los managers y administradores de tu organización pueden ver registros según la configuración de roles establecida por tu administrador.</p>
+
+  <h3>¿Cuánto cuesta ClockIn?</h3>
+  <p>ClockIn es una app de pago, con precios escalonados por usuario según el tamaño de tu organización, gestionados a través del Atlassian Marketplace. Consulta el listado de la app en el Marketplace para ver los precios actuales.</p>
+
+  <h3>¿Qué pasa con mis datos si se desinstala la app?</h3>
+  <p>Los datos almacenados por la app se eliminan conforme a las políticas de retención de datos de Atlassian Forge tras la desinstalación. Consulta nuestra <a href="/es/privacy.html">Política de Privacidad</a> para más detalles.</p>
+
+  <h3>¿Dónde puedo obtener soporte?</h3>
+  <p>Para preguntas o problemas no cubiertos aquí, escríbenos a <a href="mailto:info@fuksia.com">info@fuksia.com</a>.</p>
+
+  <footer class="bottom">Fuksia Labs · ClockIn for Jira</footer>
+</div>
+</body>
+</html>
